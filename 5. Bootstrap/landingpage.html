@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>Bootstrap 101 Template</title>
+
+        <!-- Bootstrap -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+        <style>
+
+            #home {
+                background-image: url(images/dawn-landscape-mountains-nature.jpg);
+                background-size: cover;
+            }
+
+            #download {
+                background-color: #d9c659;
+            }
+
+
+            .large {
+                font-size: 1000%;
+            }
+
+            .contentContainer {
+                padding-top: 80px;
+                text-align: center;
+            }
+
+            #aboutTitle {
+                margin-bottom: 50px;
+            }
+
+            .dlBtn {
+                border: 1px solid #d9c659;
+                background-color: #d9c659;
+                margin-bottom: 50px;
+                width: 150px;
+                color: white;
+            }
+
+            .dlBtn:hover {
+                background-color: white;
+                border: 1px solid #d9c659;
+            }
+
+            .dlIcon {
+                width: 200px;
+                margin: 20px;
+            }
+
+            .jumbotron {
+                margin-bottom: 0;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">MyApp</a>
+
+                </div>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#download">Download the App</a></li>
+                    </ul>
+
+                    <form class="navbar-form navbar-right">
+                        <div class="form-group">
+                            <label for="username" class="sr-only">Username</label>
+                            <input type="text" class="form-control" name="username" placeholder="Username"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="text" class="form-control" placeholder="Password" name="password"/>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Log In" class="btn btn-default btn-success"/>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="jumbotron contentContainer" id="home">
+            <div class="container text-center centered" >
+                <h1>Hello World!</h1>
+                <p class="lead">Download this awesome app today!</p>
+                <p>Interested? Join our mailing list.</p>
+
+                <form class="form-inline">
+                    <div class="form-group">
+                        <input type="email" placeholder="Your email" class="form-control" name="email"/>
+                    </div>
+                        <input type="submit" class="btn btn-success " id="submitBtn"/>
+                </form>
+            </div>
+        </div>
+
+        <div class="container contentContainer" id="about">
+            <h1>How Awesome It Is</h1>
+            <p class="lead" id="aboutTitle">Here are some details of the app.</p>
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <span class="glyphicon glyphicon-music large"></span>
+                    <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+                    <button type="button" class="btn btn-default dlBtn">Download</button>
+                </div>
+                <div class="col-md-4">
+                    <span class="glyphicon glyphicon-star large"></span>
+
+                    <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+                    <button type="button" class="btn btn-default dlBtn">Download</button>
+                </div>
+                <div class="col-md-4 text-center"><span class="glyphicon glyphicon-heart large"></span>
+
+                    <p>text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text text </p>
+                    <button type="button" class="btn btn-default dlBtn">Download</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron contentContainer" id="download">
+            <div class="container">
+                <h1>Download the App Today!</h1>
+                <p class="lead">Start feeling great everyday.</p>
+                <a href=""><img class="dlIcon" src="images/App-Store-Icon.png" /></a>
+                <a href=""><img class="dlIcon" src="images/appstore_button_google.png" /></a>
+            </div>
+
+        </div>
+
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+
+        <script>
+            $(".contentContainer").css("min-height", $(window).height());
+
+
+        </script>
+    </body>
+</html>

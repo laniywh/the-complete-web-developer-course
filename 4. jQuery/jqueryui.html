@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Learning Javascript</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <style>
+
+            #draggable {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+            }
+
+            #resizable {
+                width: 200px;
+                height: 200px;
+                background-color: red;
+            }
+
+            #target {
+                height: 300px;
+                width: 300px;
+                background-color: yellow;
+            }
+
+        </style>
+
+    </head>
+    <body>
+
+        <div id="draggable">
+            Drag me around!
+        </div>
+
+        <div id="resizable">
+            Resize me!
+        </div>
+
+        <div id="target"></div>
+
+        <script>
+
+            $("#draggable").draggable();
+            $("#resizable").resizable();
+            $("#target").droppable({
+                drop: function(ui, event) {
+                    alert("dropped!");
+                    $(this).css({
+                        backgroundColor:"red"
+                    })
+                }
+            });
+
+
+        </script>
+
+
+    </body>
+</html>

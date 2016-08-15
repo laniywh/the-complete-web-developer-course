@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///Users/lani/Desktop/My%20website/3.%20Javascript/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Learning Javascript</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <style>
+
+            #circle {
+                width:100px;
+                height:100px;
+                background-color:red;
+                border-radius:50px
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <button id="myButton">You know you want to click me...</button>
+        <p id="text">some more text</p>
+
+        <button id="textChanger">Change first div</button>
+        <div id="firstDiv">FirstDiv: This is some text</div>
+        <hr>
+
+        <button id="textappender">Append some text</button>
+        <div id="seconddiv">Javascript is...</div>
+        <hr>
+
+        <button id="textCreator">Create some text</button>
+        <div id="emptydiv"></div>
+        <hr>
+
+        <button id="styleChanger">Change first div style</button>
+        <div id="circle"></div>
+        <hr>
+
+        <input id="myInput" type="text" value="test">
+        <button id="textChangerByInput">Change text by input</button>
+        <hr>
+
+
+
+        <script type="text/javascript">
+
+            var divId="firstDiv";
+
+            var newText=document.getElementById("myInput").value;
+
+
+            // change text on webpage once it's loaded
+            alert(document.getElementById("text").innerHTML="some more text");
+
+            // run a function when button is clicked
+            document.getElementById("myButton").onclick=function() {
+                alert("Hi!");
+            }
+
+            document.getElementById("textChanger").onclick=function() {
+                document.getElementById("firstDiv").innerHTML="This is awesome!";
+            }
+
+            document.getElementById("textappender").onclick=function() {
+                document.getElementById("seconddiv").innerHTML= document.getElementById("seconddiv").innerHTML + "great!";
+            }
+
+            document.getElementById("textCreator").onclick=function() {
+                document.getElementById("emptydiv").innerHTML="<ul><li>Cat</li><li>Dog</li></ul>";
+            }
+
+            document.getElementById("circle").onclick=function() {
+                document.getElementById("circle").style.display="none";
+            }
+
+            document.getElementById("styleChanger").onclick=function() {
+                document.getElementById(divId).style.display="none";
+            }
+
+            document.getElementById("textChangerByInput").onclick=function() {
+                var newText=document.getElementById("myInput").value;
+                document.getElementById("firstDiv").innerHTML=newText;
+            }
+
+            // Array
+            var myArray=new Array();
+            myArray[0]="pizza";
+            myArray[1]="chocolate";
+
+            console.log(myArray);
+
+            myOtherArray=["rain","sunshine"];
+            console.log(myOtherArray);
+
+        </script>
+    
+
+</body></html>

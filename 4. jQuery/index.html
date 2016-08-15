@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Learning Javascript</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <!--
+        <script type="text/javascript" src="jquery.min.js"></script>
+-->
+
+
+        <style>
+
+            #circle {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                border-radius: 100px;
+            }
+
+            .square {
+                width: 300px;
+                height: 300px;
+                background-color: red;
+                margin-top: 10px;
+            }
+        </style>
+
+    </head>
+    <body>
+
+        <div id="circle"></div>
+        <div class="square"></div>
+
+        <p>This is some text</p>
+        <button id="fader">Fade out paragraph</button>
+        <button id="faderIn">Fade in paragraph</button>
+        <hr />
+
+        <h1>AJAX = Asyncronous Javascript And XML.</h1>
+
+<!--        <iframe src="http://www.cnn.com"></iframe>-->
+
+        <script>
+
+            if (typeof jQuery != "undefined") {
+
+                //alert("jQuery is installed");
+            } else {
+                alert("jQuery is not installed");
+            }
+
+            // Can choose any element w/o a class or id
+//            $("div").click(function() {
+//                alert("Div clicked!");
+//            })
+
+//            $("#circle").click(function() {
+//                //alert("Circle clicked!");
+//                //$("p").html("The text has been changed!");
+//
+//                // return the html content
+////                alert($("p").html(""));
+//            })
+
+
+//            $("#circle").hover(function() {
+//                //alert("Circle hovered!");
+//
+//                // return element's attribute
+//                //alert($("iframe").attr("src"));
+//
+//                // change element's attribute
+////                $("iframe").attr("src", "http://www.latimes.com");
+//
+//            })
+
+
+//            $(".square").click(function() {
+//                // change element style
+//                $(".square").css("width", "500px");
+//            })
+
+
+            // change any element's css style
+//            $("div").click(function() {
+//                // change element style
+//                $(this).css("width", "500px");
+//
+//                // hide element
+//                $(this).css("display", "none");
+//                $(this).hide();
+//                $(this).fadeOut();
+//            })
+
+            /************************fading content***************************/
+            // p fade out when button clicked
+//            $("#fader").click(function() {
+////                $("p").fadeOut();
+//                $("p").fadeOut(2000); // fade out in 2000ms
+//                $("p").fadeOut("fast");
+//                $("p").fadeOut("slow");
+//
+//                // call back
+//                // run a function when fadeout complete
+//                $("p").fadeOut("slow", function() {
+//                    alert("fadeout complete");
+//                });
+//
+//            })
+//            $("#faderIn").click(function() {
+//                $("p").fadeIn();
+//            })
+//
+
+            /*********************Animating object***********************/
+//            $("#circle").click(function() {
+//                $(this).animate({
+//                    width:"300px",
+//                    height:"300px",
+//                    borderRadius:"150px",
+//                    marginLeft:"100px",
+//                    marginTop:"100px"
+//
+//                },1500);
+//            })
+
+            /*****************************AJAX****************************/
+            // take content in test.html and put it into data
+//            $.get("test.html", function(data) {
+//                alert(data);
+//            });
+
+            // better than using .get, has failure notice
+            $.ajax({
+                url:"test.html"
+            }).done(function(data) {   // call back function in ajax
+                $("h1").html(data);
+                $("h1").append(data);
+            })
+
+
+        </script>
+
+    </body>
+</html>

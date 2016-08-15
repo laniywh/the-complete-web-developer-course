@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- internal way of styling-->
+    <style type="text/css">
+        .large {
+            font-size: 200%;
+        }
+
+        #green {
+            color: green;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+        .bold {
+            font-weight:bold;
+        }
+
+        .floatleft {
+            float:left;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin: 10px;
+
+        }
+
+        .bluebox {
+            background-color: blue;
+            width:200
+
+            position: absolute;
+            left:100px;
+            top:200px;
+            z-index: 1;
+
+            border: 2px yellow solid;
+            border-style: ridge solid dotted dashed;
+            border-color: aqua blueviolet orange goldenrod;
+        }
+
+
+        .redbox {
+            background-color: red;
+            padding: 10px;
+j           margin: 0;
+
+
+            position: relative;
+            z-index: 2;
+
+            border-radius: 50px;
+        }
+
+        .greenbox {
+            background-color: green;
+
+            left:100px;
+            top:200px;
+            z-index: 1;
+
+            border-radius: 50px;
+        }
+
+        .clear {
+            clear:both;
+        }
+
+        .menu {
+            position: fixed;
+            z-index: 1;
+
+
+            background-color: black;
+            height: 100px;
+            width: 100%;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .bold {
+            font-weight: bold;
+            color: green;
+            font-size: 1em;
+        }
+
+        .italic {
+            font-style: italic;
+            font-size: 2em;
+        }
+
+        .underline {
+            text-decoration: underline;
+        }
+
+
+        a:visited {
+            color:green;
+        }
+        a:hover {
+            font-size:50px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="bluebox">
+        <p class="large" >This is some text.</p>
+    </div>
+
+    <div class="redbox">
+        <p id="green" class="large">This is some text.</p>
+    </div>
+
+    <div class="greenbox">
+        <p class="large">This is some text.</p>
+    </div>
+
+    <div class="clear"></div>
+
+    <p>The third <span class="underline large">word</span> is underlined.</p>
+
+    <p class="bold">some bold text</p>
+
+    <p class="italic">some italic text</p>
+
+    <a href="http://www.google.com" target="_blank">Google</a>
+
+</body>
+</html>
